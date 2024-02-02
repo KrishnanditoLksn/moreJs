@@ -1,0 +1,19 @@
+{
+  "name": "core",
+  "version": "1.0.0",
+  "description": "",
+  "main": "alert.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "moreJs"
+  },
+  "keywords": [
+    "more"
+  ],
+  "type": "module",
+  "author": "dito",
+  "license": "ISC"
+}

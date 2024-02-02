@@ -7,4 +7,3 @@ admin = name
 alert(admin)
 let ourPlanet = 'Earth';
 
-let currentVisitorName;
