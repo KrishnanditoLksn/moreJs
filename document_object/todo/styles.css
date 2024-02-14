@@ -1,0 +1,9 @@
+.html{
+    scroll-behavior: smooth;
+}
+
+.title,div.text-field{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
