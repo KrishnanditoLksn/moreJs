@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Event World</title>
+
+    <style>
+        .contents {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: 2px solid black;
+            padding: 15px;
+        }
+
+        #generateButton {
+            margin-top: 5px;
+            margin-bottom: 15px;;
+        }
+    </style>
+</head>
+<body onload="welcome()">
+<div align="center" class="contents" hidden>
+    <button id="incrementButton" onclick="increment()">Tekan Aku :)</button>
+    <h3>Kamu sudah menekan tombol di atas sebanyak <span id="count">0</span></h3>
+</div>
+
+<script>
+    // Kode JavaScript kita
+    function welcome() {
+        alert('Sim salabim muncullah elemen-elemen HTML!');
+        const contents = document.querySelector('.contents')
+        contents.removeAttribute('hidden');
+    }
+
+    function increment() {
+        document.getElementById('count').innerText++;
+        //teks melakukan proses increment (++) pada elemen yang memiliki atribut id dengan value count
+        document.getElementById('incrementButton').onclick = increment;
+
+        if ((document.getElementById('count').innerText === '7')) {
+            // document.getElementById('incrementButton').innerText = 'Cukup!';
+            // document.getElementById('incrementButton').onclick = null;
+            const hiddenMessage = document.createElement('h4');
+            hiddenMessage.innerText = 'Hayolo apa yang kamu lakukan?';
+            const image = document.createElement('img');
+            image.setAttribute('src', 'https://i.ibb.co/0V49VRZ/catto.jpg');
+            const contents = document.querySelector('.contents');
+            contents.appendChild(hiddenMessage).appendChild(image)
+        }
+    }
+    //menggunakan event listener untuk menambahkan event pada saat halaman web dimuat
+    window.addEventListener('load', welcome)
+    document.getElementById('incrementButton').addEventListener('click', increment)
+</script>
+</body>
+</html>
